@@ -20,15 +20,22 @@
 # Példa: [1, 2, 2, 3] -> [1, 2, 3].
 # Készíthetünk egy új listát, vagy módosíthatjuk a bemeneti listát is.
 def remove_adjacent(nums):
-    # TODO...
-    return
+    nums.append(0)  # Hogy könnyebb legyen a for feltételét megírni
+    res_list = []
+    for i in range(0, len(nums) - 1):
+        if nums[i] != nums[i + 1]:
+            res_list.append(nums[i])
+
+    return res_list
+
 
 # E.
 # Bemenet: két lista, mindkettőben az elemek növekvő sorrendbe rendezve.
 # Kimenet: egy összefésült lista, melyben az elemek rendezve szerepelnek.
 def list_merge(list1, list2):
-    # TODO...
-    return
+    res_list = list1 + list2
+    res_list.sort()
+    return res_list
 
 
 # Egy egyszerű teszt fv. Kiírja az egyes fv.-ek visszaadott értékét, ill.
@@ -59,7 +66,6 @@ def main():
     test(list_merge(['aa', 'aa'], ['aa', 'bb', 'bb']),
          ['aa', 'aa', 'aa', 'bb', 'bb'])
 
-#############################################################################
 
 if __name__ == '__main__':
     main()
