@@ -67,8 +67,27 @@ what you're at-- there"; and he threw down three or four gold pieces on
 the threshold. "You can tell me when I've worked through that," says he,
 looking as fierce as a commander."""
 
+
 def megoldas():
-    pass
+    words = {}
+
+    text = sorted(TEXT.lower().split())
+    for word in text:
+        words[word] = text.count(word)
+
+    print(words)
+
+
+def megoldas2():
+    words = sorted(TEXT.lower().split())
+    d = {}
+    for word in words:
+        if word in d:
+            d[word] += 1
+        else:
+            d[word] = 1
+
+    print(d)
 
 
 def main():
@@ -77,6 +96,9 @@ def main():
         text = " ".join(TEXT.split(delimiter))
     text = text.split(" ")
     print(text)
+
+    megoldas()
+    megoldas2()
 
 
 if __name__ == '__main__':
