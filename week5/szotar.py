@@ -15,6 +15,23 @@ def main():
     d['a'] = 'alfaaaa'
     print(d['a'])
 
+    print(d.keys())
+    print(d.values())
+    print(list(d.values()))
+
+    for k in d.keys():
+        print(f"kulcs: {k} - érték: {d[k]}")
+
+    print(d.items())
+    for k, v in d.items():
+        print(f"{k} - {v}")
+
+    print('beta' in d.values())
+
+    print(d)
+    del d['a']
+    print(d)
+
 
 if __name__ == '__main__':
     main()
