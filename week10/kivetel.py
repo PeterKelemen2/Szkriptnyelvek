@@ -7,11 +7,17 @@ def cat(fname):
         text = f.read()
         print('---', fname, ':')
         print(text)
-        f.close()
-    except IOError:
+    except IOError as e:
         print("Error, file not found: ", fname, file=sys.stderr)
+        print("Error message:", e)
     except:
         print("Error while reading the following file", fname, file=sys.stderr)
+    else:
+        print("No error")
+    finally:
+        # Bármi van, lefut
+        f.close()
+        print("End of file reading")
 
 
 if __name__ == '__main__':
