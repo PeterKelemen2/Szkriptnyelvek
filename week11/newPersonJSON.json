@@ -1,0 +1,8 @@
+{
+    "age": 39,
+    "first": "John",
+    "last": "Doe",
+    "registered": true,
+    "salary": 70000,
+    "sex": "M"
+}
