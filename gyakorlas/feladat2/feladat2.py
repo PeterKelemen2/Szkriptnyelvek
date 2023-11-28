@@ -1,6 +1,3 @@
-import sys
-
-
 def read_strings():
     end_word = input("End word:")
     while True:
@@ -9,10 +6,10 @@ def read_strings():
             print("END")
             break
         else:
-            print(get_string_info(current_word))
+            print(str(string_info(current_word)) + "\n" + "-" * 20)
 
 
-def get_string_info(word):
+def string_info(word):
     info = {"upper": 0,
             "lower": 0,
             "length": len(word)}
